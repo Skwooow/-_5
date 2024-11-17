@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body::after {
+            background: url(https://i.pinimg.com/originals/d2/5f/4c/d25f4c8d98b5fb547ba14976fbe0daf5.jpg);
+            content: "";
+            opacity: 70%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+
+        
+        @keyframes move {
+            from {
+            transform: translateX(0);
+            }
+            to {
+            transform: translateX(75em);
+            }
+        }
+
+        .caranimation {
+            animation: move 7s infinite;
+            animation-timing-function: linear;
+        }
+
+        
+
+        .road {
+            position: absolute;
+            top: 288px;
+            left: 0px;
+            width: 107em;
+            height: 10px;
+            background-color: rgb(60, 60, 60);
+        }
+
+
+
+        .sunlightanimation {
+            right: 10px;
+            position: absolute;
+            animation-name: rotation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            height: 150px;
+            width: 150px;
+            animation-timing-function: linear;
+            transform-origin: center;
+        }
+
+        @keyframes rotation {
+            0% { transform:rotate(0deg);}
+            100% { transform:rotate(360deg);}
+        }
+
+        
+
+        .sun {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 70px;
+            height: 70px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform-origin: center;
+    
+        }
+
+
+        .sunlights{
+            transform: translate(22.5%, -50%);
+        }
+
+        .sunlight1 {
+            position: absolute;
+            top: 55px;
+            right: 170px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(90deg);
+            transform-origin: center;
+        }
+
+        .sunlight2 {
+            position: absolute;
+            top: 55px;
+            right: 35px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(90deg);
+            transform-origin: center;
+        }
+
+        .sunlight3 {
+            position: absolute;
+            top: -10px;
+            right: 105px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(0deg);
+            transform-origin: center;
+        }
+
+        .sunlight4 {
+            position: absolute;
+            top: 120px;
+            right: 102.5px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(0deg);
+            transform-origin: center;
+        }
+
+        .sunlight5 {
+            position: absolute;
+            top: 10px;
+            right: 155px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(130deg);
+            transform-origin: center;
+        }
+
+        .sunlight6 {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(50deg);
+            transform-origin: center;
+        }
+
+        .sunlight7 {
+            position: absolute;
+            top: 100px;
+            right: 155px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(50deg);
+            transform-origin: center;
+        }
+
+        .sunlight8 {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            width: 5px;
+            height: 40px;
+            background-color: rgb(242, 255, 0);
+            border: 3px solid rgb(255, 174, 0);
+            border-radius: 100px;
+            transform: rotate(130deg);
+            transform-origin: center;
+        }
+
+
+
+        .main {
+            position: absolute;
+            left: 100px;
+            top: 200px;
+            width: 300px;
+            height: 60px;
+            background-color: rgb(102, 75, 255);
+            border-top-right-radius: 30%;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .mainline {
+            position: absolute;
+            left: 170px;
+            top: 250px;
+            width: 150px;
+            height: 3px;
+            background-color: rgb(165, 165, 165);
+        }
+
+        
+
+        .window {
+            position: absolute;
+            left: 185px;
+            top: 145px;
+            width: 90px;
+            height: 55px;
+            background-color: rgb(0, 0, 0);
+            opacity: 30%;
+        }
+
+        .windowline {
+            position: absolute;
+            left: 275px;
+            top: 145px;
+            width: 5px;
+            height: 55px;
+            background-color: rgb(165, 165, 165);
+            border-top-right-radius: 10px;
+        }
+
+
+
+        .roof1 {
+            position: absolute;
+            left: 180px;
+            top: 140px;
+            width: 100px;
+            height: 10px;
+            background-color: rgb(0, 0, 0);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .roof2 {
+            position: absolute;
+            left: 180px;
+            top: 146px;
+            width: 5px;
+            height: 54px;
+            background-color: rgb(0, 0, 0);
+            border-top-right-radius: 15px;
+            border-top-left-radius: 100px;
+        }
+
+
+
+        .wheel1 {
+            position: absolute;
+            left: 130px;
+            top: 235px;
+            width: 45px;
+            height: 45px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 100%;
+        }
+
+        .wheelwhite1 {
+            position: absolute;
+            left: 135px;
+            top: 240px;
+            width: 35px;
+            height: 35px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100%;
+        }
+
+        .wheelmini1 {
+            position: absolute;
+            left: 137.5px;
+            top: 242.5px;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(165, 165, 165);
+            border-radius: 100%;
+        }
+
+
+
+        .wheel2 {
+            position: absolute;
+            left: 315px;
+            top: 235px;
+            width: 45px;
+            height: 45px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 100%;
+        }
+
+        .wheelwhite2 {
+            position: absolute;
+            left: 320px;
+            top: 240px;
+            width: 35px;
+            height: 35px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100%;
+        }
+
+        .wheelmini2 {
+            position: absolute;
+            left: 322.5px;
+            top: 242.5px;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(165, 165, 165);
+            border-radius: 100%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="road"></div>
+
+
+<div class="sunlightanimation">
+    <div class="sun"></div>
+<div class="sunlights">
+    <div class="sunlight1"></div>
+    <div class="sunlight2"></div>
+    <div class="sunlight3"></div>
+    <div class="sunlight4"></div>
+    <div class="sunlight5"></div>
+    <div class="sunlight6"></div>
+    <div class="sunlight7"></div>
+    <div class="sunlight8"></div></div>
+</div>
+
+
+<div class="caranimation">
+    <div class="main"></div>
+    <div class="mainline"></div>
+
+    <div class="window"></div>
+    <div class="windowline"></div>
+
+    <div class="roof1"></div>
+    <div class="roof2"></div>
+
+    <div class="wheel1"></div>
+    <div class="wheelwhite1"></div>
+    <div class="wheelmini1"></div>
+
+    <div class="wheel2"></div>
+    <div class="wheelwhite2"></div>
+    <div class="wheelmini2"></div>
+</div>
+    
+
+</body>
+</html>
